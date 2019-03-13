@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
-int c[5],k=0;
+
+int c[5]={0},k=0;
+
 void Waitingtime1(int p[],int n,int bt[],int wt[],int q)
 {
     int a[n];
@@ -116,15 +118,15 @@ void sortBurstTime(int bt[],int n)
 
 int main()
 {
-    int p[]={1,2,3};
-    int burst_time[]={10,14,3};
+    int p[]={1,2,3,4,5};
+    int burst_time[]={10,29,3,7,12};
     cout<<"-----------------------------First Come First Serve---------------------------"<<endl;
-    avgtime(p,3,burst_time);
+    avgtime(p,5,burst_time);
     cout<<"-----------------------------Round Robin----------------------------------------"<<endl;
-    avgtime1(p,3,burst_time,5);
+    avgtime1(p,5,burst_time,5);
     cout<<"----------------------------Shortest Job First---------------------------------"<<endl;
-    sortBurstTime(burst_time,3);
-    avgtime(p,3,burst_time);
+    sortBurstTime(burst_time,5);
+    avgtime(p,5,burst_time);
 
     int min=c[0];
     int z;
